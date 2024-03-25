@@ -103,7 +103,7 @@
   }
 
   .gradient-text {
-    @apply bg-purple-gradient bg-cover bg-clip-text text-transparent;
+    @apply bg-orange-gradient bg-cover bg-clip-text text-transparent;
   }
 
   /* ===== ALIGNMENTS */
@@ -118,7 +118,7 @@
   /* ===== TYPOGRAPHY */
   /* 44 */
   .h1-semibold {
-    @apply text-[36px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px];
+    @apply text-[32px] font-semibold sm:text-[40px] leading-[120%] sm:leading-[56px];
   }
 
   /* 36 */
@@ -232,7 +232,7 @@
   }
 
   .home-heading {
-    @apply h1-semibold max-w-[500px] flex-wrap text-center text-white shadow-sm;
+    @apply h1-semibold max-w-[500px] flex-wrap text-center text-white;
   }
 
   /* Credits Page */
