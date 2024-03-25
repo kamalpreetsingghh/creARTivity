@@ -14,7 +14,7 @@ const Sidebar = () => {
   return (
     <aside className="sidebar">
       <div className="flex size-full flex-col gap-4">
-        <Link href="/" className="sidebar-logo">
+        <Link href="/" className="sidebar-logo pl-2">
           <Image
             src="/assets/images/logo-text.svg"
             alt="logo"
@@ -31,9 +31,7 @@ const Sidebar = () => {
                   <li
                     key={link.route}
                     className={`sidebar-nav_element group ${
-                      isActive
-                        ? "bg-purple-gradient text-white"
-                        : "text-gray-700"
+                      isActive ? "bg-orange-gradient text-white" : "text-black"
                     }`}
                   >
                     <Link className="sidebar-link" href={link.route}>
@@ -42,7 +40,9 @@ const Sidebar = () => {
                         alt="logo"
                         width={24}
                         height={24}
-                        className={`${isActive && "brightness-200"}`}
+                        className={`${
+                          isActive ? "brightness-200" : "brightness-0"
+                        }`}
                       />
                       {link.label}
                     </Link>
@@ -58,9 +58,7 @@ const Sidebar = () => {
                   <li
                     key={link.route}
                     className={`sidebar-nav_element group ${
-                      isActive
-                        ? "bg-purple-gradient text-white"
-                        : "text-gray-700"
+                      isActive ? "bg-orange-gradient text-white" : "text-black"
                     }`}
                   >
                     <Link className="sidebar-link" href={link.route}>
@@ -69,7 +67,9 @@ const Sidebar = () => {
                         alt="logo"
                         width={24}
                         height={24}
-                        className={`${isActive && "brightness-200"}`}
+                        className={`${
+                          isActive ? "brightness-200" : "brightness-0"
+                        }`}
                       />
                       {link.label}
                     </Link>
@@ -83,7 +83,7 @@ const Sidebar = () => {
             </ul>
           </SignedIn>
           <SignedOut>
-            <Button asChild className="button bg-purple-gradient bg-cover">
+            <Button asChild className="button bg-orange-gradient bg-cover">
               <Link href="/sign-in">Login</Link>
             </Button>
           </SignedOut>
