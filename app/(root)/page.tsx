@@ -1,7 +1,6 @@
 import { Collection } from "@/components/shared/Collection";
 import { navLinks } from "@/constants";
 import { getAllImages } from "@/lib/actions/image.actions";
-import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -15,7 +14,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
   return (
     <>
       <section className="home">
-        <h1 className="home-heading">
+        <h1 className="home-heading font-pacifico">
           Unleash your creativity with CreARTivity
         </h1>
         <ul className="flex-center w-full gap-20">
@@ -31,6 +30,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
                   alt="image"
                   width={24}
                   height={24}
+                  className="brightness-0"
                 ></Image>
               </li>
               <p className="p-14-medium text-white text-center">{link.label}</p>

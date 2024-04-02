@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -118,7 +120,7 @@
   /* ===== TYPOGRAPHY */
   /* 44 */
   .h1-semibold {
-    @apply text-[32px] font-semibold sm:text-[40px] leading-[120%] sm:leading-[56px];
+    @apply text-[36px] font-semibold sm:text-[40px] leading-[120%] sm:leading-[56px];
   }
 
   /* 36 */
@@ -381,4 +383,8 @@
   font-size: 16px;
   font-weight: 600;
   color: #384262;
+}
+
+.font-pacifico {
+  font-family: Pacifico;
 }

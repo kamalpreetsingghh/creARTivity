@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
+import AppThemeProvider from "@/components/shared/AppThemeProvider";
 
 const poppins = Poppins({ weight: "300", subsets: ["latin"] });
 
@@ -19,7 +20,9 @@ export default function RootLayout({
   return (
     <ClerkProvider appearance={{ variables: { colorPrimary: "#ED640D" } }}>
       <html lang="en">
-        <body className={poppins.className}>{children}</body>
+        <body className={poppins.className}>
+          <AppThemeProvider>{children}</AppThemeProvider>
+        </body>
       </html>
     </ClerkProvider>
   );
