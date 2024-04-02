@@ -33,7 +33,9 @@ const Home = async ({ searchParams }: SearchParamProps) => {
                   className="brightness-0"
                 ></Image>
               </li>
-              <p className="p-14-medium text-white text-center">{link.label}</p>
+              <p className="p-16-semibold text-background-color text-center">
+                {link.label}
+              </p>
             </Link>
           ))}
         </ul>

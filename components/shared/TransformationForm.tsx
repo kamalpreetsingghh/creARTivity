@@ -32,7 +32,7 @@ import {
 } from "@/constants";
 import { useEffect, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { CustomField } from "./CustomeField";
+import { CustomField } from "./CustomField";
 import { AspectRatioKey, debounce, deepMergeObjects } from "@/lib/utils";
 import MediaUploader from "./MediaUploader";
 import TransformedImage from "./TransformedImage";
@@ -94,7 +94,6 @@ const TransformationForm = ({
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
     setIsSubmitting(true);
     if (data || image) {
       const transformationURL = getCldImageUrl({
@@ -335,7 +334,7 @@ const TransformationForm = ({
         <div className="flex flex-col gap-4">
           <Button
             type="button"
-            className="submit-button capitalize"
+            className="submit-button capitalize text-background-color"
             disabled={isTransforming || newTransformation === null}
             onClick={onTransformHandler}
           >
@@ -343,7 +342,7 @@ const TransformationForm = ({
           </Button>
           <Button
             type="submit"
-            className="submit-button capitalize"
+            className="submit-button capitalize text-background-color"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Save Image"}

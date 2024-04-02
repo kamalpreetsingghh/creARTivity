@@ -31,7 +31,9 @@ const Sidebar = () => {
                   <li
                     key={link.route}
                     className={`sidebar-nav_element group ${
-                      isActive ? "bg-orange-gradient text-white" : "text-black"
+                      isActive
+                        ? "bg-orange-gradient text-background-color"
+                        : "text-color inactive"
                     }`}
                   >
                     <Link className="sidebar-link" href={link.route}>
@@ -41,7 +43,9 @@ const Sidebar = () => {
                         width={24}
                         height={24}
                         className={`${
-                          isActive ? "brightness-200" : "brightness-0"
+                          isActive
+                            ? "icon-selected-brightness"
+                            : "icon-brightness"
                         }`}
                       />
                       {link.label}
@@ -58,7 +62,9 @@ const Sidebar = () => {
                   <li
                     key={link.route}
                     className={`sidebar-nav_element group ${
-                      isActive ? "bg-orange-gradient text-white" : "text-black"
+                      isActive
+                        ? "bg-orange-gradient text-background-color"
+                        : "text-color inactive"
                     }`}
                   >
                     <Link className="sidebar-link" href={link.route}>
@@ -68,7 +74,9 @@ const Sidebar = () => {
                         width={24}
                         height={24}
                         className={`${
-                          isActive ? "brightness-200" : "brightness-0"
+                          isActive
+                            ? "icon-selected-brightness"
+                            : "icon-brightness"
                         }`}
                       />
                       {link.label}

@@ -29,7 +29,7 @@ const ThemeSwitch = () => {
         className="toggle-btn"
       >
         {theme === "dark" ? (
-          <FaMoon className="w-6 h-6" />
+          <FaMoon className="w-6 h-6 text-orange-500" />
         ) : (
           <FaSun className="w-6 h-6 text-orange-500" />
         )}
