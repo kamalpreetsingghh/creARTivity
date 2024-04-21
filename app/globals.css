@@ -262,8 +262,18 @@ body {
     border-color: var(--divider-color);
   }
 
+  /* Search Component */
+  .search {
+    @apply flex w-full rounded-[16px] border px-4 md:max-w-96;
+    background-color: var(--form-background-color);
+    border-color: var(--divider-color);
+  }
+
   .search-field {
-    @apply border-0 bg-transparent w-full placeholder:text-dark-400 h-[50px] p-16-medium focus-visible:ring-offset-0 p-3 focus-visible:ring-transparent !important;
+    @apply border-0 bg-transparent w-full h-[50px] p-16-medium focus-visible:ring-offset-0 p-3 focus-visible:ring-transparent !important;
+    ::placeholder {
+      color: var(--text-grey-color);
+    }
   }
 
   .submit-button {
@@ -271,7 +281,8 @@ body {
   }
 
   .select-field {
-    @apply w-full rounded-[16px] h-[50px] md:h-[54px] p-16-semibold disabled:opacity-100 px-4 py-3 focus:ring-offset-0 focus-visible:ring-transparent focus:ring-transparent focus-visible:ring-0 focus-visible:outline-none !important;
+    @apply w-full rounded-[16px] h-[50px] md:h-[54px] p-16-semibold disabled:opacity-100 px-4 py-3 
+    focus:ring-offset-0 focus-visible:ring-transparent focus:ring-transparent focus-visible:ring-0 focus-visible:outline-none !important;
     background-color: var(--form-background-color);
     border-color: var(--divider-color);
   }
@@ -366,7 +377,8 @@ body {
   }
 
   .collection-card {
-    @apply flex flex-1 cursor-pointer flex-col gap-5 rounded-[16px] border-2 border-orange-200/15 p-4 shadow-xl shadow-orange-200/10 transition-all hover:shadow-purple-200/20;
+    @apply flex flex-1 cursor-pointer flex-col gap-5 rounded-[16px] 
+    border-2 border-orange-200/15 p-4 shadow-xl shadow-orange-200/10 transition-all hover:shadow-purple-200/20;
     background-color: var(--background-color);
   }
 
@@ -376,11 +388,15 @@ body {
   }
 
   .media-uploader_cta {
-    @apply flex-center flex h-72 cursor-pointer flex-col gap-5 rounded-[16px] border border-dashed bg-purple-100/20 shadow-inner;
+    @apply flex-center flex h-72 cursor-pointer flex-col gap-5 rounded-[16px] 
+    border border-dashed shadow-inner;
+    background-color: var(--form-background-color);
+    border-color: var(--divider-color);
   }
 
   .media-uploader_cta-image {
-    @apply rounded-[16px] bg-white  p-5 shadow-sm shadow-purple-200/50;
+    @apply rounded-lg p-3 shadow-sm shadow-orange-500/20;
+    background-color: var(--background-color);
   }
 
   /* Navbar Component */
@@ -393,11 +409,6 @@ body {
 
   .header-nav_elements {
     @apply mt-8 flex w-full flex-col items-start gap-5;
-  }
-
-  /* Search Component */
-  .search {
-    @apply flex w-full rounded-[16px] border-2 border-purple-200/20 px-4 md:max-w-96;
   }
 
   /* Sidebar Component */
@@ -456,8 +467,10 @@ body {
   }
 
   .transformed-placeholder {
-    @apply flex-center p-14-medium h-full min-h-72 flex-col gap-5 rounded-[16px] border border-dashed shadow-inner;
+    @apply flex-center p-14-medium h-full min-h-72 flex-col gap-5 rounded-[16px] 
+    border border-dashed shadow-inner;
     background-color: var(--form-background-color);
+    border-color: var(--divider-color);
   }
 }
 
