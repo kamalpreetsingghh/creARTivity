@@ -373,7 +373,7 @@ body {
   }
 
   .collection-btn {
-    @apply button w-32 bg-purple-gradient bg-cover text-white;
+    @apply button w-32 bg-orange-gradient bg-cover text-background-color;
   }
 
   .collection-card {
