@@ -53,7 +53,7 @@
     --sidebar-tab-color-dark: rgb(58, 24, 3);
     --brightness-icon-dark: brightness(200%);
     --form-background-color-dark: rgba(34, 34, 34, 0.5);
-    --sheet-background-color-dark: rgb(30, 17, 0);
+    --sheet-background-color-dark: rgb(26, 14, 0);
   }
 
   html.dark {

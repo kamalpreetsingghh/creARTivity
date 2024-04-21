@@ -54,7 +54,7 @@ const MobileNav = () => {
                     <li
                       className={`${
                         isActive && "gradient-text"
-                      } p-18 flex whitespace-nowrap text-orange-600`}
+                      } p-18 flex whitespace-nowrap text-color`}
                       key={link.route}
                     >
                       <Link
@@ -66,6 +66,7 @@ const MobileNav = () => {
                           alt="logo"
                           width={24}
                           height={24}
+                          className="icon-brightness"
                         />
                         {link.label}
                       </Link>
