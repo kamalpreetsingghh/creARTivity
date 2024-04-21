@@ -109,9 +109,11 @@ const Card = ({ image }: { image: IImage }) => {
           sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
         />
         <div className="flex-between">
-          <p className="p-20-semibold mr-3 line-clamp-1">{image.title}</p>
+          <p className="p-20-semibold mr-3 line-clamp-1 text-primary">
+            {image.title}
+          </p>
           <Image
-            src={`/assets/icons/${
+            src={`/assets/images/${
               transformationTypes[
                 image.transformationType as TransformationTypeKey
               ].icon

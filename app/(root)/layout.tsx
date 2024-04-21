@@ -9,7 +9,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <main className="root">
       <Sidebar />
       <MobileNav />
-      <ThemeSwitch />
+      <div className="hidden md:block absolute top-0 right-0 mr-8 mt-4">
+        <ThemeSwitch />
+      </div>
+
       <div className="root-container">
         <div className="wrapper">{children}</div>
       </div>

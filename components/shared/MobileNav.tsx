@@ -8,6 +8,7 @@ import React from "react";
 import { Button } from "../ui/button";
 import { navLinks } from "@/constants";
 import { usePathname } from "next/navigation";
+import ThemeSwitch from "./ThemeSwitch";
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -24,19 +25,20 @@ const MobileNav = () => {
       </Link>
       <nav className="flex gap-2">
         <SignedIn>
+          <ThemeSwitch />
           <UserButton afterSignOutUrl="/" />
 
           <Sheet>
             <SheetTrigger>
               <Image
-                src="/assets/icons/menu.svg"
+                src="/assets/images/menu.png"
                 alt="menu"
                 width={32}
                 height={32}
                 className="cursor-pointer"
               />
             </SheetTrigger>
-            <SheetContent className="sheet-content sm:w-64">
+            <SheetContent className="sheet-content sm:w-64 sheet-background-color">
               <Image
                 src="/assets/images/logo-text.svg"
                 alt="logo"
@@ -52,7 +54,7 @@ const MobileNav = () => {
                     <li
                       className={`${
                         isActive && "gradient-text"
-                      } p-18 flex whitespace-nowrap text-dark-700`}
+                      } p-18 flex whitespace-nowrap text-orange-600`}
                       key={link.route}
                     >
                       <Link
@@ -75,7 +77,8 @@ const MobileNav = () => {
           </Sheet>
         </SignedIn>
         <SignedOut>
-          <Button asChild className="button bg-purple-gradient bg-cover">
+          <ThemeSwitch />
+          <Button asChild className="button bg-orange-gradient bg-cover ml-2">
             <Link href="/sign-in">Login</Link>
           </Button>
         </SignedOut>

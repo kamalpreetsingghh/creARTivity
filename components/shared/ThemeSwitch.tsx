@@ -21,20 +21,16 @@ const ThemeSwitch = () => {
   }
 
   return (
-    <div
-      className={`flex justify-end items-start absolute top-0 right-0 mt-4 mr-8`}
+    <button
+      onClick={() => setTheme(theme !== "dark" ? "dark" : "light")}
+      className="toggle-btn"
     >
-      <button
-        onClick={() => setTheme(theme !== "dark" ? "dark" : "light")}
-        className="toggle-btn"
-      >
-        {theme === "dark" ? (
-          <FaMoon className="w-6 h-6 text-orange-500" />
-        ) : (
-          <FaSun className="w-6 h-6 text-orange-500" />
-        )}
-      </button>
-    </div>
+      {theme === "dark" ? (
+        <FaMoon className="w-6 h-6 text-orange-500" />
+      ) : (
+        <FaSun className="w-6 h-6 text-orange-500" />
+      )}
+    </button>
   );
 };
 
