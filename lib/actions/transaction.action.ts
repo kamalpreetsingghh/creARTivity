@@ -16,7 +16,7 @@ export async function checkoutCredits(transaction: CheckoutTransactionParams) {
     line_items: [
       {
         price_data: {
-          currency: "inr",
+          currency: "usd",
           unit_amount: amount,
           product_data: {
             name: transaction.plan,
@@ -42,7 +42,6 @@ export async function createTransaction(transaction: CreateTransactionParams) {
   try {
     await connectToDatabase();
 
-    // Create a new transaction with a buyerId
     const newTransaction = await Transaction.create({
       ...transaction,
       buyer: transaction.buyerId,
