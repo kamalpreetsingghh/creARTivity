@@ -81,10 +81,11 @@ const TransformationForm = ({
         }
       : defaultValues;
 
-  console.log(userId);
-  console.log(action);
-  console.log(data);
-  console.log(initialValues);
+  useEffect(() => {
+    if (image && (type === "restore" || type === "removeBackground")) {
+      setNewTransformation(transformationType.config);
+    }
+  }, [image, transformationType.config, type]);
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
@@ -208,12 +209,6 @@ const TransformationForm = ({
       await updateCredits(userId, creditFee);
     });
   };
-
-  useEffect(() => {
-    if (image && (type === "restore" || type === "removeBackground")) {
-      setNewTransformation(transformationType.config);
-    }
-  }, [image, transformationType.config, type]);
 
   return (
     <Form {...form}>

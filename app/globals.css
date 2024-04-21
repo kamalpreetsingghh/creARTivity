@@ -146,6 +146,10 @@ body {
   color: var(--background-color);
 }
 
+.background-color {
+  background-color: var(--background-color);
+}
+
 .bg-orange-gradient {
   background-image: linear-gradient(to right, #ffa500, #ff6347);
 }

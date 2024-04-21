@@ -32,7 +32,7 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
         </Button>
       </AlertDialogTrigger>
 
-      <AlertDialogContent className="flex flex-col gap-10">
+      <AlertDialogContent className="flex flex-col gap-10 background-color">
         <AlertDialogHeader>
           <AlertDialogTitle>
             Are you sure you want to delete this image?
@@ -43,7 +43,12 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
         </AlertDialogHeader>
 
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogCancel
+            className="border bg-black dark:bg-white hover:bg-black/80 
+          dark:hover:bg-white/80 text-background-color hover:text-background-color"
+          >
+            Cancel
+          </AlertDialogCancel>
           <AlertDialogAction
             className="border bg-red-500 text-white hover:bg-red-600"
             onClick={() =>
