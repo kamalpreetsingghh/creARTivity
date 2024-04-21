@@ -1,7 +1,12 @@
 "use client";
 
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -57,19 +62,21 @@ const MobileNav = () => {
                       } p-18 flex whitespace-nowrap text-color`}
                       key={link.route}
                     >
-                      <Link
-                        className="sidebar-link cursor-pointer"
-                        href={link.route}
-                      >
-                        <Image
-                          src={link.icon}
-                          alt="logo"
-                          width={24}
-                          height={24}
-                          className="icon-brightness"
-                        />
-                        {link.label}
-                      </Link>
+                      <SheetClose asChild>
+                        <Link
+                          className="sidebar-link cursor-pointer"
+                          href={link.route}
+                        >
+                          <Image
+                            src={link.icon}
+                            alt="logo"
+                            width={24}
+                            height={24}
+                            className="icon-brightness"
+                          />
+                          {link.label}
+                        </Link>
+                      </SheetClose>
                     </li>
                   );
                 })}
